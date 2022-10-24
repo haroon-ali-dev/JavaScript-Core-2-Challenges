@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css?family=Chivo:900i|Muli|Titillium+Web"
-      rel="stylesheet"
-    />
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <title>Fastest Presser Game</title>
-  </head>
 
-  <body>
-    <div class="content"></div>
-  </body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Chivo:900i|Muli|Titillium+Web" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <title>Fastest Presser Game</title>
+</head>
 
-  <script src="script.js"></script>
+<body>
+  <div class="content">
+    <div>
+      <p>Game Controls</p>
+      <input id="seconds" type="number">
+      <button id="btn-start">Start Game</button>
+    </div>
+    <div>
+      <p>Player 1</p>
+      <p id="p1-count">0</p>
+    </div>
+    <div>
+      <p>Player 2</p>
+      <p id="p2-count">0</p>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+
 </html>
