@@ -4,7 +4,11 @@ function calculateWords(chapterOfABook) {
 	// Write your code in here
 	if (!chapterOfABook) return wordCount;
 
-	const split = chapterOfABook.split(" ");
+	const clean = chapterOfABook.replace(/[^a-zA-Z ]/g, "");
+
+	const lowercase = clean.toLowerCase();
+
+	const split = lowercase.split(" ");
 
 	for (let word of split) {
 		let count = 0;
@@ -16,10 +20,18 @@ function calculateWords(chapterOfABook) {
 		wordCount[word] = count;
 	}
 
-	return wordCount;
+	const sortedArray = Object.entries(wordCount).sort((a, b) => b[1] - a[1]);
+
+	const wordCount2 = {};
+
+	for (let wordPair of sortedArray) {
+		wordCount2[wordPair[0]] = wordPair[1];
+	}
+
+	return wordCount2;
 }
 
-console.log(calculateWords(getDraculaChapterOne()));
+console.log(calculateWords("A string with, With some punctuation"));
 
 /**                            */
 /**                            */
